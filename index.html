@@ -5,34 +5,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        .btn {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Employee Prize Drawing System</h1>
-    <div class="container">
+    <div class="container py-4">
+        <h1 class="text-center mb-4">Employee Prize Drawing System</h1>
         <div class="row">
-            <div class="col" id="employeeColumn">
-                <h2>Employees</h2>
+            <div class="col-md-3">
+                <h2 class="column-header">Employees</h2>
                 <ul id="employeeList" class="list-group"></ul>
             </div>
-
-            <div class="col" id="prizeColumn">
-                <h2>Prizes</h2>
-                <form id="prizeForm">
-                    <input type="text" id="newPrize" placeholder="Enter new prize">
-                    <button type="submit">Add Prize</button>
+            <div class="col-md-3">
+                <h2 class="column-header">Prizes</h2>
+                <form id="prizeForm" class="form-inline input-group mb-3">
+                    <input type="text" id="newPrize" class="form-control" placeholder="Enter new prize">
+                    <button type="submit" id="button-addon2" class="btn btn-outline-secondary">Add</button>
                 </form>
                 <ul id="prizeList" class="list-group"></ul>
             </div>
-
-            <div class="col list-group" id="winnerColumn">
-                <h2>Winners</h2>
+            <div class="col-md-3">
+                <h2 class="column-header">Winners</h2>
                 <ul id="winnersList" class="list-group"></ul>
             </div>
-
-            <div class="col" id="actionColumn">
-                <h2>Draw</h2>
-                <button onclick="drawPrize()">Draw Prize</button>
-                <p id="result"></p>
+            <div class="col-md-3">
+                <h2 class="column-header">Draw</h2>
+                <button onclick="drawPrize()" class="btn btn-success w-100">Draw Prize</button>
+                <p id="result" class="mt-3"></p>
             </div>
         </div>
     </div>

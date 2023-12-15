@@ -55,8 +55,8 @@ function updateEmployeeList() {
         listItem.className = "list-group-item";
         
         let button = document.createElement("button");
-        button.innerHTML = "<i class='bi bi-calendar-x'></i>";
-        button.className = "btn btn-danger";
+        button.innerHTML = "<i class='bi bi-x-square-fill'></i>";
+        button.classList.add("btn", "btn-danger", "btn-sm", "ms-2"); // Bootstrap classes
         button.onclick = function() { markAbsent(employee); };
 
         listItem.prepend(button);
