@@ -5,10 +5,18 @@
 </head>
 <body>
     <h1>Employee Prize Drawing System</h1>
+
+    <label for="absentEmployee">Mark Employee as Absent:</label>
+    <input type="text" id="absentEmployee" placeholder="Enter employee name">
+    <button onclick="markAbsent()">Mark Absent</button>
+    
+    <h2>Draw Prize</h2>
     <button onclick="drawPrize()">Draw Prize</button>
     <p id="result"></p>
+
     <h2>Winners</h2>
     <ul id="winnersList"></ul>
+
     <script src="script.js"></script>
 </body>
 </html>
