@@ -54,4 +54,7 @@ function updateEmployeeList() {
         button.innerText = "Mark Absent";
         button.onclick = function() { markAbsent(employee); };
 
-        listItem.appendChild
+        listItem.appendChild(button);
+        employeeList.appendChild(listItem);
+    });
+}
