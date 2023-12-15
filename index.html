@@ -2,19 +2,46 @@
 <html>
 <head>
     <title>Prize Drawing System</title>
+    <style>
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px; /* Should be removed if you want dynamic height */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
 <body>
     <h1>Employee Prize Drawing System</h1>
+    
+    <div class="row">
+        <div class="column" id="employeeColumn">
+            <h2>Employees</h2>
+            <ul id="employeeList"></ul>
+        </div>
 
-    <h2>Employees</h2>
-    <ul id="employeeList"></ul>
+        <div class="column" id="prizeColumn">
+            <h2>Prizes</h2>
+            <ul id="prizeList"></ul>
+        </div>
 
-    <h2>Draw Prize</h2>
-    <button onclick="drawPrize()">Draw Prize</button>
-    <p id="result"></p>
+        <div class="column" id="winnerColumn">
+            <h2>Winners</h2>
+            <ul id="winnersList"></ul>
+        </div>
 
-    <h2>Winners</h2>
-    <ul id="winnersList"></ul>
+        <div class="column" id="actionColumn">
+            <button onclick="drawPrize()">Draw Prize</button>
+            <p id="result"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
