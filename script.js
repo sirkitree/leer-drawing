@@ -4,6 +4,7 @@ let winners = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     updateEmployeeList();
+    updatePrizeList();
 }, false);
 
 function drawPrize() {
@@ -21,6 +22,7 @@ function drawPrize() {
     winners.push(selectedEmployee + " won " + selectedPrize);
     updateWinnersList();
     updateEmployeeList();
+    updatePrizeList();
 
     document.getElementById("result").innerText = selectedEmployee + " won " + selectedPrize;
 }
@@ -39,6 +41,7 @@ function updateWinnersList() {
     winners.forEach(function(winner) {
         let listItem = document.createElement("li");
         listItem.innerText = winner;
+        listItem.className = "list-group-item";
         winnersList.appendChild(listItem);
     });
 }
@@ -49,12 +52,51 @@ function updateEmployeeList() {
     employees.forEach(function(employee) {
         let listItem = document.createElement("li");
         listItem.innerText = employee;
+        listItem.className = "list-group-item";
         
         let button = document.createElement("button");
-        button.innerText = "Mark Absent";
+        button.innerHTML = "<i class='bi bi-calendar-x'></i>";
+        button.className = "btn btn-danger";
         button.onclick = function() { markAbsent(employee); };
 
-        listItem.appendChild(button);
+        listItem.prepend(button);
         employeeList.appendChild(listItem);
     });
 }
+
+function updatePrizeList() {
+    let prizeList = document.getElementById("prizeList");
+    prizeList.innerHTML = ""; // Clear existing list
+    prizes.forEach(function(prize, index) {
+        let listItem = document.createElement("li");
+        listItem.innerText = prize;
+        listItem.classList.add("list-group-item"); // Bootstrap class for styling
+
+        // Add remove button
+        let removeButton = document.createElement("button");
+        removeButton.innerHTML = '<i class="bi bi-x-square-fill"></i>';
+        removeButton.classList.add("btn", "btn-danger", "btn-sm", "ms-2"); // Bootstrap classes
+        removeButton.onclick = function() { removePrize(index); };
+        listItem.prepend(removeButton);
+
+        prizeList.appendChild(listItem);
+    });
+}
+
+function addPrize(event) {
+    event.preventDefault(); // Prevent form from submitting normally
+    let newPrize = document.getElementById("newPrize").value.trim();
+    if (newPrize) {
+        prizes.push(newPrize);
+        updatePrizeList();
+        document.getElementById("newPrize").value = ''; // Clear the input field
+    }
+}
+
+function removePrize(index) {
+    prizes.splice(index, 1); // Remove prize from the array
+    updatePrizeList();
+}
+
+// Attach event listener to the form for adding prizes
+document.getElementById("prizeForm").addEventListener('submit', addPrize);
