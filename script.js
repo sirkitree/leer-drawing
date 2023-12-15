@@ -2,6 +2,10 @@ let employees = ["Employee 1", "Employee 2", "Employee 3", ...]; // Add your emp
 let prizes = ["Prize 1", "Prize 2", "Prize 3", ...]; // Add your prizes here
 let winners = [];
 
+document.addEventListener('DOMContentLoaded', function() {
+    updateEmployeeList();
+}, false);
+
 function drawPrize() {
     if (employees.length === 0 || prizes.length === 0) {
         document.getElementById("result").innerText = "No more prizes or employees left.";
@@ -16,25 +20,17 @@ function drawPrize() {
 
     winners.push(selectedEmployee + " won " + selectedPrize);
     updateWinnersList();
+    updateEmployeeList();
 
     document.getElementById("result").innerText = selectedEmployee + " won " + selectedPrize;
 }
 
-function markAbsent() {
-    let absentEmployee = document.getElementById("absentEmployee").value.trim();
-    if (absentEmployee === "") {
-        alert("Please enter the name of the absent employee.");
-        return;
-    }
-
-    let index = employees.indexOf(absentEmployee);
+function markAbsent(employeeName) {
+    let index = employees.indexOf(employeeName);
     if (index > -1) {
         employees.splice(index, 1);
-        alert(absentEmployee + " has been marked as absent.");
-    } else {
-        alert("Employee not found.");
+        updateEmployeeList();
     }
-    document.getElementById("absentEmployee").value = ""; // Clear the input field
 }
 
 function updateWinnersList() {
@@ -46,3 +42,16 @@ function updateWinnersList() {
         winnersList.appendChild(listItem);
     });
 }
+
+function updateEmployeeList() {
+    let employeeList = document.getElementById("employeeList");
+    employeeList.innerHTML = "";
+    employees.forEach(function(employee) {
+        let listItem = document.createElement("li");
+        listItem.innerText = employee;
+        
+        let button = document.createElement("button");
+        button.innerText = "Mark Absent";
+        button.onclick = function() { markAbsent(employee); };
+
+        listItem.appendChild
