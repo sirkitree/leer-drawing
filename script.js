@@ -1,5 +1,5 @@
-let employees = ["Employee 1", "Employee 2", "Employee 3", ...]; // Add your employees here
-let prizes = ["Prize 1", "Prize 2", "Prize 3", ...]; // Add your prizes here
+let employees = ["Employee 1", "Employee 2", "Employee 3"]; // Add your employees here
+let prizes = ["Prize 1", "Prize 2", "Prize 3"]; // Add your prizes here
 let winners = [];
 
 document.addEventListener('DOMContentLoaded', function() {
