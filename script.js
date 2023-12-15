@@ -20,6 +20,23 @@ function drawPrize() {
     document.getElementById("result").innerText = selectedEmployee + " won " + selectedPrize;
 }
 
+function markAbsent() {
+    let absentEmployee = document.getElementById("absentEmployee").value.trim();
+    if (absentEmployee === "") {
+        alert("Please enter the name of the absent employee.");
+        return;
+    }
+
+    let index = employees.indexOf(absentEmployee);
+    if (index > -1) {
+        employees.splice(index, 1);
+        alert(absentEmployee + " has been marked as absent.");
+    } else {
+        alert("Employee not found.");
+    }
+    document.getElementById("absentEmployee").value = ""; // Clear the input field
+}
+
 function updateWinnersList() {
     let winnersList = document.getElementById("winnersList");
     winnersList.innerHTML = "";
