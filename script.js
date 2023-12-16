@@ -32,6 +32,13 @@ function drawPrize() {
     updatePrizeList();
 
     document.getElementById("result").innerText = selectedEmployee + " won " + selectedPrize;
+    
+    // Trigger confetti
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
 }
 
 function markAbsent(employeeName) {
