@@ -6,7 +6,46 @@ let employees_4 = ["Zettlemoyer, Ronald E", "Clayton, Scott E", "Bayerl, Polly A
 let employees = employees_0.concat(employees_1, employees_2, employees_3, employees_4);
 employees.sort();
 
-let prizes = ["cooler", "beanie", "cap", "duffle bag", "cargo caddy", "Weis cards", "flashlight", "amazon cards"];
+let prizes = [
+    "Leer Cooler",
+    "Leer Cooler",
+    "Leer Cooler",
+    "Leer Cooler",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer Beanie w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Leer ball cap w/ $50 Amazon card",
+    "Duffle bag w/ flashlight",
+    "Cargo caddy w/ flashlight",
+    "Cargo caddy w/ flashlight",
+    "Cargo caddy w/ flashlight",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "$100 Weis Cards",
+    "L Leer Hoodie w/ $50 Amazon Card",
+    "L Leer Hoodie w/ $50 Amazon Card",
+    "XL Leer Hoodie w/ $50 Amazon Card",
+    "XL Leer Hoodie w/ $50 Amazon Card"
+];
+
 let winners = [];
 
 document.addEventListener('DOMContentLoaded', function() {
