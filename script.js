@@ -199,8 +199,7 @@ Wise, Dashawn
 Wood, Joseph
 Wright, Carolyn
 Young, Thomas
-Zettlemoyer, Ronald
-`;
+Zettlemoyer, Ronald`;
 let employees = employeeString.split("\n");
 employees.sort();
 
