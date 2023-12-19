@@ -1,4 +1,4 @@
-let employees = `Adams, Alexander
+let employeeString = `Adams, Alexander
 Addy, Cabral Ayitey
 Aderhold, Julie
 Alsina, Marc Anthony
@@ -201,7 +201,7 @@ Wright, Carolyn
 Young, Thomas
 Zettlemoyer, Ronald
 `;
-employees.split("\n");
+let employees = employeeString.split("\n");
 employees.sort();
 
 let prizes = [
