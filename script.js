@@ -203,45 +203,44 @@ Zettlemoyer, Ronald`;
 let employees = employeeString.split("\n");
 employees.sort();
 
-let prizes = [
-    "Leer Cooler",
-    "Leer Cooler",
-    "Leer Cooler",
-    "Leer Cooler",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer Beanie w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Leer ball cap w/ $50 Amazon card",
-    "Duffle bag w/ flashlight",
-    "Cargo caddy w/ flashlight",
-    "Cargo caddy w/ flashlight",
-    "Cargo caddy w/ flashlight",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "$100 Weis Cards",
-    "L Leer Hoodie w/ $50 Amazon Card",
-    "L Leer Hoodie w/ $50 Amazon Card",
-    "XL Leer Hoodie w/ $50 Amazon Card",
-    "XL Leer Hoodie w/ $50 Amazon Card"
-];
+let prizesString = `Leer Cooler
+Leer Cooler
+Leer Cooler
+Leer Cooler
+Leer Beanie w/ $50 Amazon card
+Leer Beanie w/ $50 Amazon card
+Leer Beanie w/ $50 Amazon card
+Leer Beanie 
+Leer Beanie 
+Leer Beanie 
+Leer Beanie 
+Leer Beanie 
+Leer Beanie 
+Leer Beanie 
+Leer ball cap 
+Leer ball cap 
+Leer ball cap 
+Leer ball cap 
+Leer ball cap 
+Leer ball cap 
+Duffle bag w/ flashlight
+Cargo caddy w/ flashlight
+Cargo caddy w/ flashlight
+Cargo caddy w/ flashlight
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+$100 Weis Cards
+L Leer Hoodie 
+L Leer Hoodie 
+XL Leer Hoodie 
+XL Leer Hoodie`;
+let prizes = prizesString.split("\n");
 
 let winners = [];
 
